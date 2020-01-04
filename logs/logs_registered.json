@@ -4,6 +4,11 @@
       "request_url": "/api/stock/AAPL",
       "request_time": "1/4/20 17:44:5",
       "successfully": "Fulfilled successfully."
+    },
+    {
+      "request_url": "/api/stock/AAPL",
+      "request_time": "1/4/20 18:12:54",
+      "successfully": "Fulfilled successfully."
     }
   ]
 }
