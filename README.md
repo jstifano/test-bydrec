@@ -4,7 +4,7 @@
 
     1. Install dependencies by running npm install
     2. Lift the server with npm run start
-    4. The server will be running on https://localhost:5000.
+    3. The server will be running on https://localhost:5000.
     
     NOTE: You can import the Postman collection located in /data and test the service created.
 
