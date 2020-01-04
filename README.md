@@ -1,4 +1,4 @@
-# Bydrec Test API
+# Finance Watch API
 
 ## Installation
 
