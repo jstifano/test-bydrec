@@ -3,6 +3,7 @@ const url = require('url');
 const StockController = require('./controllers/Stock');
 const ResponseService = require('./utils/Response');
 const MiddlewareService = require('./policies/Middleware');
+const ValidationService = require('./utils/Validation');
 const { appConfig } = require('./config');
 
 module.exports = http.createServer( async (req, res) => {
@@ -18,8 +19,8 @@ module.exports = http.createServer( async (req, res) => {
 
             // Object where the info about the request is saved.
             let options = {
-                method: req.method,
-                pathname: reqUrl.pathname,
+                request_url: reqUrl.pathname,
+                request_time: ValidationService.createDateFormatted(),
                 successfully: null 
             }
             if (sanitized) {
