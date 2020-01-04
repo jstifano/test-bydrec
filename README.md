@@ -25,7 +25,17 @@
 
 ## CURL command
     The command has to be executed only if the server is running on localhost:5000
+    
     curl -XGET -H "Content-type: application/json" 'http://localhost:5000/api/stock/AAPL'
+    
+## Logs (Every Request)
+    The info about the request will be logged in a JSON file founded on /logs/logs_registered.json
+    
+    The information will be saved there is:
+    
+    - The request URL path
+    - The time of the request in the format of MM/DD/YY HH:mm:ss 
+    - If the request was fulfilled successfully or if it failed to respond to the requestor.
 
 ## Unit Tests
 
