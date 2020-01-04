@@ -20,7 +20,7 @@ const createDateFormatted = () => {
     [
         d.getMonth() + 1, 
         d.getDate(), 
-        d.getFullYear().substr(d.getFullYear().length - 2)
+        d.getFullYear().toString().substr(d.getFullYear().toString().length - 2, d.getFullYear().toString())
     ].join('/') +' '+ 
     [
         d.getHours(),
@@ -31,5 +31,6 @@ const createDateFormatted = () => {
 }
 
 module.exports = {
-    isOnlyLetters: isOnlyLetters
+    isOnlyLetters: isOnlyLetters,
+    createDateFormatted: createDateFormatted
 }
