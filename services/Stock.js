@@ -70,5 +70,8 @@ const getLatestArticles = async (url, symbol) => {
 }
 
 module.exports = {
-    get: get
+    get: get,
+    getLastPrice: getLastPrice,
+    getUrlCompanyLogo: getUrlCompanyLogo,
+    getLatestArticles: getLatestArticles
 }
