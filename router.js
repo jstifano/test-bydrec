@@ -13,7 +13,10 @@ module.exports = http.createServer( async (req, res) => {
 
     if (req.method === "GET") { 
         if (reqUrl.pathname.indexOf(appConfig.apiEndpoint+'/stock') !== -1 ) {
+            // Service to validate if the symbol comes in the URL.
             let sanitized = await MiddlewareService.sanitizeGetStockService(reqUrl.pathname.split('/')[3]);
+
+            // Object where the info about the request is saved.
             let options = {
                 method: req.method,
                 pathname: reqUrl.pathname,
