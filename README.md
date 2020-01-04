@@ -6,7 +6,7 @@
     2. Lift the server with npm run start
     4. The server will be running on https://localhost:5000.
     
-    NOTE: You can import the Postman collection located in /data/postman and test the services created.
+    NOTE: You can import the Postman collection located in /data and test the service created.
 
 ## Services description
 
@@ -15,9 +15,17 @@
     The service will folow this route so if the service is called /xxxx, to make
     the request to that service we should point to http://localhost:5000/api/xxxx
 
-## API Services
+## API Service
 
-    GET/gateways --> Get all gateways from the DB with their devices.
+    GET /stock/:symbol --> Get the info requested by the test.
+
+    - Latest stock price
+    - Path to the company logo
+    - Latest news article for the company.
+
+## CURL command
+    The command has to be executed only if the server is running on localhost:5000
+    curl -XGET -H "Content-type: application/json" 'http://localhost:5000/api/stock/AAPL'
 
 ## Unit Tests
 
